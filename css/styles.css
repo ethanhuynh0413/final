@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 0%
+}
+
+
+    
+
+
+#logo {
+    display: block;
+    float: left;
+    margin: 1em 
+}
+
+li.logo {
+    display: inline-block;
+    font-size: 2em;
+}
+
+li.logo a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+}
+
+.icon{
+    position: absolute;
+    right: 25%;
+    top: 0;
+    display: none;
+}
+
+.icon:hover li.nav{
+    display: block
+}
+nav{
+    width: 80%;
+    text-align: center;
+    margin: auto
+    
+}
+
+header {
+    background-color: orange;
+    padding: 0;
+    margin: auto;
+    z-index: 101;
+    width: 100%;
+    position: fixed;
+}
+
+
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-weight: 999;
+    padding: 0.75em
+}
+
+header ul {
+    display: block;
+    float: right;
+    margin: 2em 0 2em;
+}
+
+header ul li.nav {
+    display: inline;
+    padding: 0 2em;
+}
+
+
+header li.nav a:hover {
+    color: #777777
+}
+
+.main-container {
+    width: 100%;
+    padding: 1em 0;
+    overflow: auto
+}
+
+.main-container main {
+    margin: auto;
+
+}
+
+main {
+    width: 80%;
+}
+
+.imageGroup {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.image {
+    position: relative;
+    width: 30%;
+}
+
+.image img {
+    width: 100%
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.9);
+    color: #f1f1f1;
+    width: 100%;
+    height:100%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.image:hover .overlay {
+    opacity: 1;
+}
+article h2.article {
+    font-size: 2em;
+    background: orange;
+    color: white;
+    padding: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    
+}
+
+article p a {
+    display: block;
+    color: white;
+    background-color: gray;
+    text-align: center;
+    padding: 10px;
+    font-family: sans-serif;
+    border-top: 1px solid black;
+    text-decoration: none;
+  
+
+}
+
+article p a:hover {
+    text-decoration: underline;
+}
+
+
+
+.left {
+    position: relative;
+    width: 70%;
+    display: inline-block;
+}
+
+#about,
+#portfolio,
+#contact {
+    margin-bottom: 35px;
+    border: 1px solid black;
+    box-shadow: 3px 4px 7px #888888;
+}
+
+
+.caption {
+    width: 50%;
+    top: 25%;
+    color: #fff;
+    padding: 10px;
+    font-size: xxx-large;
+    overflow-y: auto;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+h2.hero {
+    text-align: center;
+    font-size: 48px;
+}
+
+p.hero {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    padding-top: 20px;
+}
+
+p.article {
+    background: rgb(244, 244, 244);
+    color: black;
+    font-family: sans-serif;
+    padding: 1em;
+
+}
+
+article.hero {
+    padding-top: 84px;
+    margin-bottom: 35px;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(/images/258483.jpg);
+    background-color: #cccccc;
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    position: relative;
+    width: 27%;
+    float: right;
+
+}
+
+.right aside section {
+    background-color: rgb(244, 244, 244);
+    box-shadow: 3px 4px 7px #888888;
+    padding: 10px;
+    margin: 0 0 35px 0;
+    color: black;
+    height: 199px;
+    overflow: auto;
+    border: 1px solid black
+}
+
+aside section h2 {
+    color: black;
+
+}
+
+footer {
+    color: white;
+    background: gray;
+    padding: 2em;
+    text-align: center
+}
+@media all and (min-width: 860px) and (max-width: 1200px) {
+    #logo{
+        float:none;
+        margin: 0;
+    }
+    header ul{
+        float: none
+    }
+    article.hero{
+        height: 50vh;
+    }
+}
+
+@media all and (max-width: 859px){
+    #logo{
+        float:left;
+        margin: 0;
+    }
+    header ul{
+        float: none;
+        clear: both;
+    }
+    nav ul li.nav{
+        display: none;
+        padding: 1em
+    }
+    nav{
+        width: 100%
+    }
+    .icon{
+        display:block;
+        float:right;
+        position: static
+    }
+    article.hero{
+        height: 50vh;
+    }
+    h2.hero{
+        font-size: 36px
+    }
+    main{
+        width: 95%
+    }
+    .left {
+        position: relative;
+        width: 95%;
+        display: inline;
+    }
+    .right {
+        position: relative;
+        float: none;
+        width: 95%; 
+        margin:auto
+    }
+    .overlay{
+        text-align: left;
+    }
+    aside section h2{
+        text-align: center;
+    }
+    .icon i{
+        font-size: 32px;
+    }
+    
+}
