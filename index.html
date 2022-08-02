@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ethan Huynh - Software Engineer</title>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
@@ -15,7 +16,7 @@
 
 <body>
   <header>
-    <a href="javascript:void(0);" class="icon">
+    <a href="javascript:void(0);" id="icon">
       <i class="fa fa-bars"></i>
     </a>
     <nav>
@@ -23,11 +24,11 @@
         <li class="logo"><a href="#">[ Ethan-Huynh ]</a></li>
       </div>
       <ul>
-        <li class="nav"><a href="#">Home</a></li>
-        <li class="nav"><a href="#">About</a></li>
-        <li class="nav"><a href="#">Portfolio</a></li>
-        <li class="nav"><a href="#">Contact</a></li>
-        <li class="nav"><a href="#">Blog</a></li>
+        <li class="nav"><a href="index.html">Home</a></li>
+        <li class="nav"><a href="about.html">About</a></li>
+        <li class="nav"><a href="portfolio.html">Portfolio</a></li>
+        <li class="nav"><a href="contact.html">Contact</a></li>
+        <li class="nav"><a href="blog.html">Blog</a></li>
       </ul>
       </div>
 
@@ -137,6 +138,23 @@
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script src="https://malsup.github.io/jquery.cycle2.js"></script>
+  <script>
+    var toggle = $("#icon");
+    var menu = $("nav ul");
+    var menuOpened = false;
+
+    menu.display(none);
+    toggle.show();
+
+    toggle.click(function () {
+      if (menuOpened) {
+        menu.animate({ display: 'none' });
+        menuOpened = false;
+      } else {
+        menu.animate({ display: 'block' });
+        menuOpened = true;
+      }
+    });</script>
 </body>
 
 </html>
