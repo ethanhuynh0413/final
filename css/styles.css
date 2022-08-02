@@ -291,7 +291,8 @@ footer {
     header ul {
         float: none;
         clear: both;
-        margin: 0
+        margin: 0;
+        display: none;
     }
 
     nav ul li.nav {
