@@ -9,15 +9,13 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     margin-top: 0%
 }
-
-
-    
-
-
+#icon{
+    display:none;
+}
 #logo {
     display: block;
     float: left;
-    margin: 1em 
+    margin: 1em
 }
 
 li.logo {
@@ -30,21 +28,14 @@ li.logo a {
     text-decoration: none;
 }
 
-.icon{
-    position: absolute;
-    right: 25%;
-    top: 0;
-    display: none;
-}
-
-.icon:hover li.nav{
+.icon:hover li.nav {
     display: block
 }
-nav{
+
+nav {
     width: 80%;
     text-align: center;
     margin: auto
-    
 }
 
 header {
@@ -53,7 +44,7 @@ header {
     margin: auto;
     z-index: 101;
     width: 100%;
-    position: fixed;
+    overflow: hidden;
 }
 
 
@@ -118,7 +109,7 @@ main {
     background: rgba(0, 0, 0, 0.9);
     color: #f1f1f1;
     width: 100%;
-    height:100%;
+    height: 100%;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -134,6 +125,7 @@ main {
 .image:hover .overlay {
     opacity: 1;
 }
+
 article h2.article {
     font-size: 2em;
     background: orange;
@@ -142,7 +134,7 @@ article h2.article {
     text-align: center;
     text-transform: uppercase;
     border-bottom: 1px solid black;
-    
+
 }
 
 article p a {
@@ -154,7 +146,7 @@ article p a {
     font-family: sans-serif;
     border-top: 1px solid black;
     text-decoration: none;
-  
+
 
 }
 
@@ -213,10 +205,9 @@ p.article {
 }
 
 article.hero {
-    padding-top: 84px;
+    width: 100%;
     margin-bottom: 35px;
-    position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(/images/258483.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(../images/258483.jpg);
     background-color: #cccccc;
     background-size: cover;
     background-position: center;
@@ -255,68 +246,102 @@ footer {
     padding: 2em;
     text-align: center
 }
-@media all and (min-width: 860px) and (max-width: 1200px) {
-    #logo{
-        float:none;
+
+@media screen and (max-width: 1200px) {
+    #logo {
+        float: none;
         margin: 0;
     }
-    header ul{
+
+    header ul {
         float: none
     }
-    article.hero{
+
+    article.hero {
         height: 50vh;
+    }
+
+    main {
+        width: 90%;
     }
 }
 
-@media all and (max-width: 859px){
-    #logo{
-        float:left;
+@media screen and(max-width: 1080px) {
+    .overlay {
+        font-size: 12px;
+
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #icon{
+        display: block;
+        float: right;
+        position: static;
+    }
+    #logo {
+        float: none;
         margin: 0;
     }
-    header ul{
+
+    header {
+        top: 0
+    }
+
+    header ul {
         float: none;
         clear: both;
+        margin: 0
     }
-    nav ul li.nav{
-        display: none;
+
+    nav ul li.nav {
+        display: block;
         padding: 1em
     }
-    nav{
+
+    nav {
         width: 100%
     }
-    .icon{
-        display:block;
-        float:right;
-        position: static
+
+    article.hero {
+        height: 75vh;
+        margin-bottom: 0
     }
-    article.hero{
-        height: 50vh;
+
+    h2.hero {
+        font-size: 24px
     }
-    h2.hero{
-        font-size: 36px
-    }
-    main{
+
+    main {
         width: 95%
     }
+
     .left {
         position: relative;
         width: 95%;
         display: inline;
     }
+
     .right {
         position: relative;
         float: none;
-        width: 95%; 
-        margin:auto
+        width: 95%;
+        margin: auto
     }
-    .overlay{
+
+    .overlay {
         text-align: left;
     }
-    aside section h2{
+
+    aside section h2 {
         text-align: center;
     }
-    .icon i{
-        font-size: 32px;
+    .right aside section{
+        height:fit-content;
     }
-    
+}
+@media screen and (min-width: 850px) and (max-height: 600px) {
+    h2.hero {
+        font-size: 24px;
+    }
 }
